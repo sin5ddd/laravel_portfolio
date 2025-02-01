@@ -1,7 +1,7 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms'
-import typography from '@tailwindcss/typography'
-import aspectRatio from '@tailwindcss/aspect-ratio';
+// import defaultTheme from 'tailwindcss/defaultTheme';
+// import forms from '@tailwindcss/forms'
+// import typography from '@tailwindcss/typography'
+// import aspectRatio from '@tailwindcss/aspect-ratio';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,7 +10,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         './resources/**/*.js',
-        './resources/**/*.vue',
+        './resources/**/*.vue'
     ],
     theme: {
         extend: {
@@ -20,8 +20,8 @@ export default {
         },
     },
     plugins: [
-        typography,
-        forms,
-        aspectRatio,
-    ],
+        // typography,
+        // forms,
+        // aspectRatio,
+    ]
 };
