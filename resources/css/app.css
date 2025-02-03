@@ -18,6 +18,54 @@
 				dark:bg-slate-800 dark:shadow-amber-200
 				dark:-outline-offset-1 dark:outline-white/10
 				hover:shadow-xl transition-all duration-200
-				hidden
+				/*hidden*/
 		}
+}
+table {
+		th, td {
+				max-width: calc(100vw / 2.5);
+				min-width: 4rem;
+				padding: .3rem 1rem;
+		}
+}
+
+button {
+		border-radius: 6rem;
+		padding: .3rem 1rem;
+		color: #eee;
+		transition: all 100ms;
+		box-shadow: 0 0 0 rgba(0, 0, 0, .3);
+}
+
+button:hover {
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
+
+button.normal {
+		background: #155dfc;
+}
+
+button.normal:hover {
+		background: #134dcf;
+}
+
+button.del {
+		background: #ff6467;
+}
+
+button.del:hover {
+		background: #ff4043;
+}
+
+.line-clamp-2 {
+		color: #9ca3af;
+}
+
+input{
+		border: solid 1px rgba(0, 0, 0, 0.3);
+		margin: 5px;
+		border-radius: 3px;
+}
+input:focus{
+		border: solid 1px rgba(100, 0, 0, 0.5);
 }
