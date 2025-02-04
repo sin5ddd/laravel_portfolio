@@ -74,13 +74,13 @@
 		</tr>
 		<tr>
 			<td>
-				<img src="/img/{{$url->shorten_url}}.jpg" alt="">
+				<img src="/img/{{$url->shorten_url}}.jpg" alt="jpg">
 			</td>
 			<td>
-				<img src="/img/{{$url->shorten_url}}.png" alt="">
+				<img src="/img/{{$url->shorten_url}}.png" alt="png">
 			</td>
 			<td>
-				<img src="/img/{{$url->shorten_url}}.svg" alt="">
+				<img src="/img/{{$url->shorten_url}}.svg" alt="svg">
 			</td>
 		</tr>
 	</table>

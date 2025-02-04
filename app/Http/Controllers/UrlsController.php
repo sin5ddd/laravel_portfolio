@@ -9,6 +9,7 @@
 	use chillerlan\QRCode\QROptions;
 	use chillerlan\QRCode\Common\EccLevel;
 	use Barryvdh\Debugbar\Facades\Debugbar;
+	use Illuminate\Support\Facades\Redirect;
 	use chillerlan\QRCode\Output\QRGdImagePNG;
 	use chillerlan\QRCode\Output\QRGdImageJPEG;
 	use function PHPUnit\Framework\fileExists;
@@ -45,6 +46,17 @@
 			return view('url.show', [
 				'url' => $url,
 			]);
+		}
+		
+		public function redirect($hash) {
+			
+			$url = Url::where('shorten_url', $hash)->first();
+			if(!$url){
+				Redirect::to('404');
+				exit;
+			}
+			// トラッキングなどの処理を挟む
+			Redirect::to($url->orig_url)->send();
 		}
 		
 		private function bake_real_url($url): string {
