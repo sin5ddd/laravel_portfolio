@@ -20,8 +20,6 @@
 		/*		hover:shadow-xl transition-all duration-200*/
 		/*		hidden*/
 		/*}*/
-
-
 		table {
 				th, td {
 						max-width: calc(100vw / 2.5);
@@ -100,6 +98,14 @@
 				}
 		}
 
+		#real-url-copy-button {
+
+				max-width: 20rem;
+				overflow: hidden;
+				white-space: pre;
+				text-overflow: ellipsis;
+		}
+
 		nav#top-menu {
 				color: white;
 				display: flex;
@@ -116,7 +122,7 @@
 				}
 		}
 
-		#float-logout-button{
+		#float-logout-button {
 				position: fixed;
 				display: flex;
 				bottom: 10px;
