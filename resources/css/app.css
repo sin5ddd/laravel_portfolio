@@ -9,17 +9,17 @@
 }
 
 @layer components {
-		.card-container {
-				@apply mx-auto flex
-				mt-1
-				max-w-xs sm:max-w-sm
-				items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg
-				outline-black/5
-				dark:bg-slate-800 dark:shadow-amber-200
-				dark:-outline-offset-1 dark:outline-white/10
-				hover:shadow-xl transition-all duration-200
-				/*hidden*/
-		}
+		/*.card-container {*/
+		/*		@apply mx-auto flex*/
+		/*		mt-1*/
+		/*		max-w-xs sm:max-w-sm*/
+		/*		items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg*/
+		/*		outline-black/5*/
+		/*		dark:bg-slate-800 dark:shadow-amber-200*/
+		/*		dark:-outline-offset-1 dark:outline-white/10*/
+		/*		hover:shadow-xl transition-all duration-200*/
+		/*		hidden*/
+		/*}*/
 
 
 		table {
