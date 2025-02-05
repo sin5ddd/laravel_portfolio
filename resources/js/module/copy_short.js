@@ -1,6 +1,6 @@
 export function copy_short(id) {
-	navigator.clipboard.writeText(document.URL+id);
-	alert("コピーしました");
+	navigator.clipboard.writeText(id);
+	alert("コピーしました:"+id);
 }
 
 let buttons = document.getElementsByClassName('copy_button');

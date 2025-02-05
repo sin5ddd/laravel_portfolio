@@ -30,6 +30,7 @@
 				}
 		}
 
+
 		button {
 				border-radius: 6rem;
 				padding: .3rem 1rem;
@@ -97,5 +98,32 @@
 								width: 100px;
 						}
 				}
+		}
+
+		nav#top-menu {
+				color: white;
+				display: flex;
+				justify-content: space-around;
+				padding: 1rem;
+				background: #1e345e;
+
+				ul {
+						display: flex;
+				}
+
+				li {
+						min-width: 5rem;
+				}
+		}
+
+		#float-logout-button{
+				position: fixed;
+				display: flex;
+				bottom: 10px;
+				right: 10px;
+				background: #1e345e;
+				justify-content: center;
+				align-items: center;
+
 		}
 }

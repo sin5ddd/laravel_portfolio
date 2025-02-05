@@ -13,6 +13,28 @@
 
 </head>
 <body>
+<nav id="top-menu" style="display: flex;">
+	<h2>URL短縮＆QR生成</h2>
+	<ul style="display: flex;">
+		<li>
+			@if (Request::is('index'))
+				<span style="color:gray;">一覧</span>
+			@else
+				<a href="/index">一覧</a>
+			@endif
+		</li>
+		<li>
+			@if (Request::is('create'))
+				<span style="color:gray;">新規作成</span>
+			@else
+				<a href="/create">新規作成</a>
+			@endif
+		</li>
+	</ul>
+</nav>
 @yield('contents')
+
+@include('parts.flash_message_box')
+@include('parts.logout_button')
 </body>
 </html>

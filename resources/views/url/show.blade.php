@@ -76,7 +76,7 @@
 			</tr>
 			<tr>
 				<td colspan="3" style="text-align:center;">
-					<button class="normal copy_button"><i class="fa-regular fa-copy"></i> {{$url->short}}</button>
+					<button class="normal copy_button" value="{{$url->short}}"><i class="fa-regular fa-copy"></i> {{$url->short}}</button>
 				</td>
 			</tr>
 			<tr>
@@ -84,7 +84,7 @@
 			</tr>
 			<tr>
 				<td colspan="3" style="text-align:center;">
-					<button class="normal copy_button"><i class="fa-regular fa-copy"></i> {{$url->real_url}}</button>
+					<button class="normal copy_button" value="{{$url->real_url}}"><i class="fa-regular fa-copy"></i> {{$url->real_url}}</button>
 				</td>
 			</tr>
 			<tr>

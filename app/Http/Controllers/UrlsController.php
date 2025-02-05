@@ -21,7 +21,44 @@
 			return view('url.index', ["urls" => $urls]);
 		}
 		
-		public function create() { }
+		public function create() {
+			return view('url.create');
+		}
+		
+		public function insert(Request $request) {
+			
+			// if(Url::where('orign_url'))
+			do {
+				$hash = $this->make_short($request->input('orig_url'));
+			}while(Url::where('shorten_url', $hash)->exists());
+			
+			$url = new Url();
+			
+			$url->name         = $request->input('name');
+			$url->orig_url     = $request->input('orig_url');
+			$url->utm_source   = $request->input('utm_source');
+			$url->utm_medium   = $request->input('utm_medium');
+			$url->utm_campaign = $request->input('utm_campaign');
+			$url->shorten_url = $hash;
+			
+			$ret = $url->save();
+			
+			Debugbar::info($ret);
+			if($ret){
+				$arr['message']='更新しました';
+				$arr['type']='info';
+				return redirect('/show/'.$url->id)->with($arr);
+			}else{
+				$arr['message']='更新失敗';
+				$arr['type']='error';
+				return redirect('/create')->withErrors($arr);
+			}
+		}
+		
+		private function make_short(string $str){
+			$ret = substr(bin2hex(random_bytes(12)), 0, 12);
+			return $ret;
+		}
 		
 		public function store(Request $request) {
 			$url = Url::where('id', $request->input("id"))
