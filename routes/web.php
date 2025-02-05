@@ -1,28 +1,11 @@
 <?php
 	
 	use Illuminate\Support\Facades\Route;
+	use App\Http\Controllers\UrlsController;
 	
-	Route::get('/', [
-		\App\Http\Controllers\UrlsController::class,
-		'index',
-	]);
-	Route::get('/show/{id}', [
-		\App\Http\Controllers\UrlsController::class,
-		'show',
-	]);
-	Route::get('/create', [
-		\App\Http\Controllers\UrlsController::class,
-		'create',
-	]);
-	Route::post('/store', [
-		\App\Http\Controllers\UrlsController::class,
-		'store',
-	]);
-	Route::post('/delete/{id}', [
-		\App\Http\Controllers\UrlsController::class,
-		'delete',
-	]);
-	Route::get('/{hash}',[
-		\App\Http\Controllers\UrlsController::class,
-		'redirect',
-	]);
+	Route::get('/', [UrlsController::class, 'index',]);
+	Route::get('/show/{id}', [UrlsController::class, 'show',]);
+	Route::get('/create', [UrlsController::class, 'create',]);
+	Route::post('/store', [UrlsController::class, 'store',]);
+	Route::post('/delete/{id}', [UrlsController::class, 'delete',]);
+	Route::get('/{hash}', [UrlsController::class, 'redirect',]);
