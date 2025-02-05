@@ -72,7 +72,7 @@
 
 		<table>
 			<tr>
-				<th colspan="3" style="max-width: 600px;">ショートURL</th>
+				<th colspan="3" style="max-width: 600px;">短縮URL</th>
 			</tr>
 			<tr>
 				<td colspan="3" style="text-align:center;">
@@ -80,11 +80,11 @@
 				</td>
 			</tr>
 			<tr>
-				<th colspan="3" style="max-width: 600px;">展開URL</th>
+				<th colspan="3" style="max-width: 600px;">展開されるURL</th>
 			</tr>
 			<tr>
 				<td colspan="3" style="text-align:center;">
-					<button class="normal copy_button" value="{{$url->real_url}}"><i class="fa-regular fa-copy"></i> {{$url->real_url}}</button>
+					<button class="normal copy_button" id="real-url-copy-button" value="{{$url->real_url}}"><i class="fa-regular fa-copy"></i> {{$url->real_url}}</button>
 				</td>
 			</tr>
 			<tr>

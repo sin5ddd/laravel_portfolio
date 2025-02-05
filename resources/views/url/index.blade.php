@@ -11,7 +11,7 @@
 					<th>id</th>
 					<td>識別名</td>
 					<th>元リンク</th>
-					<th>省略リンク</th>
+					<th>短縮リンク</th>
 					<th></th>
 				</tr>
 				@foreach($urls as $url)
@@ -23,7 +23,7 @@
 						<td>{{$url->name}}</td>
 						<td class="line-clamp-2">{{$url->orig_url}}</td>
 						<td>
-							<button id="id_{{$url->id}}" class="normal copy_button" value="{{$url->shorten_url}}">
+							<button id="id_{{$url->id}}" class="normal copy_button" value="{{$url->fullpath}}">
 								<i class="fa-regular fa-copy"></i>{{$url->shorten_url}}
 							</button>
 						</td>
