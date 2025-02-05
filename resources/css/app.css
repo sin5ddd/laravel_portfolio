@@ -1,9 +1,9 @@
-@import "tailwindcss";
+/*@import "tailwindcss";*/
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 @layer base {
-		body{
+		body {
 				font-family: 'Noto Sans JP', sans-serif;
 		}
 }
@@ -11,7 +11,7 @@
 @layer components {
 		.card-container {
 				@apply mx-auto flex
-						mt-1
+				mt-1
 				max-w-xs sm:max-w-sm
 				items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg
 				outline-black/5
@@ -20,52 +20,82 @@
 				hover:shadow-xl transition-all duration-200
 				/*hidden*/
 		}
-}
-table {
-		th, td {
-				max-width: calc(100vw / 2.5);
-				min-width: 4rem;
-				padding: .3rem 1rem;
+
+
+		table {
+				th, td {
+						max-width: calc(100vw / 2.5);
+						min-width: 4rem;
+						padding: .3rem 1rem;
+				}
 		}
-}
 
-button {
-		border-radius: 6rem;
-		padding: .3rem 1rem;
-		color: #eee;
-		transition: all 100ms;
-		box-shadow: 0 0 0 rgba(0, 0, 0, .3);
-}
+		button {
+				border-radius: 6rem;
+				padding: .3rem 1rem;
+				color: #eee;
+				transition: all 100ms;
+				box-shadow: 0 0 0 rgba(0, 0, 0, .3);
+				text-align: center;
 
-button:hover {
-		box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
-}
+				&:hover {
+						box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+				}
 
-button.normal {
-		background: #155dfc;
-}
+				&.normal {
+						background: #5b91ff;
 
-button.normal:hover {
-		background: #134dcf;
-}
+						&:hover {
+								background: #134dcf;
+						}
+				}
 
-button.del {
-		background: #ff6467;
-}
+				&.update {
+						background: #ffb44e;
+						color: #333;
 
-button.del:hover {
-		background: #ff4043;
-}
+						&:hover {
+								background: #fe9a00;
+						}
+				}
 
-.line-clamp-2 {
-		color: #9ca3af;
-}
+				&.del {
+						background: #ff6467;
 
-input{
-		border: solid 1px rgba(0, 0, 0, 0.3);
-		margin: 5px;
-		border-radius: 3px;
-}
-input:focus{
-		border: solid 1px rgba(100, 0, 0, 0.5);
+						&:hover {
+								background: #ff4043;
+						}
+				}
+		}
+
+
+		.line-clamp-2 {
+				color: #9ca3af;
+		}
+
+		input {
+				border: solid 1px rgba(0, 0, 0, 0.3);
+				margin: 5px;
+				border-radius: 3px;
+				width: 25rem;
+				padding: .5rem;
+
+				&[readonly] {
+						border: none;
+				}
+		}
+
+		input:focus {
+				border: solid 1px rgba(100, 0, 0, 0.5);
+		}
+
+		article#shortener-edit, article#shortener-index {
+				table {
+						margin: 1rem auto;
+
+						img {
+								width: 100px;
+						}
+				}
+		}
 }

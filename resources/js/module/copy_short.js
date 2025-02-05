@@ -1,5 +1,5 @@
 export function copy_short(id) {
-	console.log(document.URL+id);
+	navigator.clipboard.writeText(document.URL+id);
 	alert("コピーしました");
 }
 
@@ -9,5 +9,3 @@ for (let i = 0; i < buttons.length; i++) {
 		copy_short(e.target.value);
 	})
 }
-// addEventListener("click", function () {})
-// console.log("読み込まれました")
